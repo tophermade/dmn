@@ -30,6 +30,14 @@ function Notify(notifyThese : GameObject[], theMessage : String){
 }
 
 
+function RemovePanels(){
+	lastSpawn = -7;
+	for(var platform : Transform in playBlockParent.transform){
+        Destroy(platform.gameObject);
+    }
+}
+
+
 function BeginRound(){
 	score = 0;
 	scoreObject.GetComponent(TextMesh).text = score.ToString();
@@ -48,6 +56,7 @@ function FinishRound(){
 
 function RestartRound(){
 	gameOverPanel.SetActive(false);
+	RemovePanels();
 	BeginRound();
 }
 

@@ -18,6 +18,7 @@ function Jump(){
 
 function BeginRound(){
 	transform.position = initialPosition;
+	gameObject.GetComponent(SpriteRenderer).enabled = true;
 
 	yield WaitForSeconds(.25);
 	body.isKinematic = false;
@@ -28,7 +29,6 @@ function BeginRound(){
 function FinishRound(){	
 	body.isKinematic = true;
 	playing = false;
-	var explosion = Instantiate(exploder, transform.position, Quaternion.identity);
 }
 
 
@@ -40,6 +40,8 @@ function GetPoint(){
 function HitBlock(){
 	print("obstacle");
 	FinishRound();
+	gameObject.GetComponent(SpriteRenderer).enabled = false;
+	var explosion = Instantiate(exploder, transform.position, Quaternion.identity);
 	manager.SendMessage("EndRound");
 }
 
