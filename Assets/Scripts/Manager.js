@@ -21,6 +21,8 @@ var spawnGapMin 		: float 		= 6.5;
 var spawnGapMax 		: float 		= 9;
 
 var score 				: int 			= 0;
+var plays 				: int 			= 0;
+var advertFrequency 	: int 			= 5;
 
 
 
@@ -69,6 +71,10 @@ function StartRound(){
 
 
 function EndRound(){
+	plays++;
+	if(plays % advertFrequency == 0){
+		BroadcastMessage("ShowAd");
+	}
 	FinishRound();
 	Notify(notify, "FinishRound");
 }

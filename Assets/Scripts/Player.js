@@ -62,7 +62,7 @@ function OnTriggerEnter2D(other: Collider2D){
 function OnCollisionEnter2D(other: Collision2D){
 	var tag = other.transform.gameObject.tag;
 
-	if(tag == "Obstacle"){
+	if(tag == "Obstacle" && playing){
 		manager.SendMessage("PlayHit");
 		HitBlock();
 	}
