@@ -19,12 +19,12 @@ var playing 			: boolean 		= false;
 
 //StandardFunction
 
-function StartRound(){
+function BeginRound(){
 	playing = true;
 }
 
 
-function EndRound(){
+function FinishRound(){
 	playing = false;
 }
 

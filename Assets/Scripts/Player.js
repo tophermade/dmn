@@ -2,6 +2,7 @@
 
 var manager 			: GameObject;
 var body 				: Rigidbody2D;
+var exploder 			: GameObject;
 
 var playing 			: boolean 		= true;
 
@@ -27,6 +28,7 @@ function BeginRound(){
 function FinishRound(){	
 	body.isKinematic = true;
 	playing = false;
+	var explosion = Instantiate(exploder, transform.position, Quaternion.identity);
 }
 
 
@@ -37,6 +39,8 @@ function GetPoint(){
 
 function HitBlock(){
 	print("obstacle");
+	FinishRound();
+	manager.SendMessage("EndRound");
 }
 
 

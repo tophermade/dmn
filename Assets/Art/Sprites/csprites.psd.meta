@@ -1,12 +1,13 @@
 fileFormatVersion: 2
 guid: 983aaadbdb337ae43bf2f55a3a89546c
-timeCreated: 1459294142
+timeCreated: 1459369995
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: csprites_0
     21300002: csprites_1
     21300004: csprites_2
+    21300006: csprites_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -61,7 +62,7 @@ TextureImporter:
         width: 61
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -30.5, y: 19}
@@ -77,7 +78,7 @@ TextureImporter:
         width: 22
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: csprites_2
@@ -88,9 +89,25 @@ TextureImporter:
         width: 22
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+    - name: csprites_3
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 468
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 19}
+        - {x: -21, y: -17}
+        - {x: -19, y: -19}
+        - {x: 21, y: -19}
+        - {x: 21, y: 19}
     outline: []
   spritePackingTag: 
   userData: 

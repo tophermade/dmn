@@ -9,6 +9,8 @@ var gameOverPanel 		: GameObject;
 var firstSpikes 		: GameObject;
 
 var scoreObject			: GameObject;
+var gameOverScoreObject	: GameObject;
+var highScoreObject		: GameObject;
 
 var player 				: GameObject;
 
@@ -37,7 +39,10 @@ function BeginRound(){
 
 
 function FinishRound(){
-
+	yield WaitForSeconds(.75);
+	gameOverPanel.SetActive(true);
+	highScoreObject.SendMessage("SetHighScore", score);
+	gameOverScoreObject.SendMessage("SetScore", score);
 }
 
 
@@ -63,6 +68,7 @@ function SpawnBlock(playerY : float){
 	lastSpawn = lastSpawn - spawnGap;
 	var newBlock : GameObject = Instantiate(potentialBlocks[0], transform.position, Quaternion.identity);
 		newBlock.transform.position.y = lastSpawn;
+		newBlock.transform.parent = playBlockParent.transform;
 
 	spawnGap = Random.Range(spawnGapMin, spawnGapMax);
 }
