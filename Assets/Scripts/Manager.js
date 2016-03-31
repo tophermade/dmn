@@ -2,6 +2,7 @@
 
 var notify 				: GameObject[];
 var potentialBlocks 	: GameObject[];
+var noise 				: GameObject;
 var playBlockParent 	: GameObject;
 
 var indexPanel 			: GameObject;
@@ -77,9 +78,15 @@ function SpawnBlock(playerY : float){
 	lastSpawn = lastSpawn - spawnGap;
 	var newBlock : GameObject = Instantiate(potentialBlocks[Random.Range(0, potentialBlocks.length)], transform.position, Quaternion.identity);
 		newBlock.transform.position.y = lastSpawn;
+		newBlock.transform.position.x = Random.Range(-3.01,3.01);
 		newBlock.transform.parent = playBlockParent.transform;
 
 	spawnGap = Random.Range(spawnGapMin, spawnGapMax);
+
+	if(Random.Range(0,3) == 2){
+		var newNoise : GameObject = Instantiate(noise, newBlock.transform.position, Quaternion.identity);
+			newNoise.transform.parent = playBlockParent.transform;
+	}
 }
 
 

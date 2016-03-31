@@ -25,8 +25,9 @@ function PlayTap(){
 }
 
 function PlayHit(){
-	var hitNum : int = Random.Range(0,deathHit.length);
-	GetComponent.<AudioSource>().PlayOneShot(deathHit[hitNum], clipLevel);
+	// var hitNum : int = Random.Range(0,deathHit.length);
+	// GetComponent.<AudioSource>().PlayOneShot(deathHit[hitNum], clipLevel);
+	GetComponent.<AudioSource>().PlayOneShot(deathFall, clipLevel);
 }
 
 function PlayFall(){

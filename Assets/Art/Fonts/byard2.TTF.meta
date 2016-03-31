@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 76165bcb2d878134fbfd71cf00a03cd7
+timeCreated: 1459419008
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 2
+  fontSize: 180
+  forceTextureCase: -2
+  characterSpacing: 1
+  characterPadding: 0
+  includeFontData: 1
+  use2xBehaviour: 0
+  fontNames:
+  - byard
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8f861db65ece26e45b0bef792518fa76, type: 3}
+  customCharacters: 
+  fontRenderingMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
