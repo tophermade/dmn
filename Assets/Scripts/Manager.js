@@ -75,7 +75,7 @@ function EndRound(){
 
 function SpawnBlock(playerY : float){
 	lastSpawn = lastSpawn - spawnGap;
-	var newBlock : GameObject = Instantiate(potentialBlocks[0], transform.position, Quaternion.identity);
+	var newBlock : GameObject = Instantiate(potentialBlocks[Random.Range(0, potentialBlocks.length)], transform.position, Quaternion.identity);
 		newBlock.transform.position.y = lastSpawn;
 		newBlock.transform.parent = playBlockParent.transform;
 
