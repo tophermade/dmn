@@ -5,7 +5,7 @@ var focusObject			: GameObject;
 
 // boolean
 var initial 			: Vector3;
-
+var heightLimit 		: float 		= 3;
 
 // float / int
 var damp 				: float 		= .1;
@@ -36,6 +36,9 @@ function Awake(){
 function Update(){
 	if(playing){
 		transform.position = Vector3(focusObject.transform.position.x+initial.x, focusObject.transform.position.y + initial.y-1.4, focusObject.transform.position.z + initial.z);
+		if(transform.position.y > heightLimit){
+			transform.position.y = heightLimit;
+		}
 	}
 }
 
