@@ -12,7 +12,6 @@ var jumpPower 			: float 		= 7;
 var lastPressStart 		: float 		= 0;
 
 
-
 function Jump(){
 	body.velocity.y = jumpPower;
 }
@@ -81,6 +80,7 @@ function Start () {
 
 
 function Update () {
+
 	// if(playing){
 	// 	if(Input.GetMouseButtonDown(0)){
 	// 		Jump();
@@ -88,15 +88,13 @@ function Update () {
 	// }
 
 	if(playing){
-
 		// if(Input.GetMouseButton(0)){
 		// 	canJump = true;	
 		// } else {
 		// 	canJump = false;
-		// }
-
-		
+		// }		
 	}
+
 	if(Input.GetMouseButtonDown(0)){
 		lastPressStart = Time.time;
 		canJump = true;

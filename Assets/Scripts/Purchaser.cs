@@ -44,6 +44,7 @@ public class Purchaser : MonoBehaviour, IStoreListener
         	PlayerPrefs.SetString("showads", "false");
             noAdsButton.SendMessage("CheckNoAds");
             restorePurchasesButton.SendMessage("CheckNoAds");
+            BroadcastMessage("DisableAds");
         }
 
         

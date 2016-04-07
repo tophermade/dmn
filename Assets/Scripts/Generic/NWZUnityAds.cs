@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.Advertisements;
 
 public class NWZUnityAds : MonoBehaviour {
-
+	#if UNITY_ANDROID || UNITY_IPHONE
 	public void ShowAd(){
 		if(Advertisement.IsReady()){
 			if(PlayerPrefs.HasKey("showads")){
@@ -16,6 +16,10 @@ public class NWZUnityAds : MonoBehaviour {
 				Advertisement.Show();
 			}
 		}
+	}
+
+	public void DisableAds(){
+		
 	}
 
 
@@ -41,4 +45,6 @@ public class NWZUnityAds : MonoBehaviour {
 				break;
 		}
 	}
+
+	#endif
 }

@@ -5,6 +5,7 @@ var hideOnAndroid 		: GameObject[];
 var hideOnIOS 			: GameObject[];
 var hideOnWeb 			: GameObject[];
 var hideOnDesktop 		: GameObject[];
+var hideOnAmazon 		: GameObject[];
 
 
 function Awake(){
@@ -26,6 +27,10 @@ function Awake(){
 		hideThese = hideOnDesktop;
 	#endif
 
+	if(SystemInfo.deviceModel.ToLower().Contains("amazon")){
+		hideThese = hideOnAmazon;
+	}
+
 	for (var i = 0; i < hideThese.length; i++) {
 		hideThese[i].SetActive(false);
 	}
@@ -33,7 +38,7 @@ function Awake(){
 
 
 function Start () {
-
+	print(SystemInfo.deviceModel);
 }
 
 function Update () {
